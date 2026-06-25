@@ -1,0 +1,243 @@
+@use "navbar";
+@use "variables";
+@use "global";
+@use "footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: calc(variables.$padding-fluid * 2);
+
+  .contact-section {
+    font-family: variables.$font-body;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: variables.$color-text;
+
+    width: 100%;
+    min-width: variables.$min-width;
+    max-width: variables.$content-width;
+    height: 100%;
+    margin: 0 auto;
+
+    padding-inline: variables.$padding-fluid;
+    gap: 1.6rem;
+
+    &-text {
+      font-size: variables.$font-size-l;
+      font-weight: variables.$font-weight-normal;
+    }
+
+    .contact-section-text {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+
+      &-title {
+        font-size: variables.$fs-fluid-hero;
+        font-weight: variables.$font-weight-semibold;
+      }
+
+      &-subtitle {
+        font-size: variables.$fs-fluid-s;
+        font-weight: variables.$font-weight-normal;
+        line-height: variables.$spacing-xl;
+
+        padding-top: variables.$padding-fluid;
+      }
+    }
+
+    .booking-link {
+      &,
+      &:visited {
+        text-decoration: underline variables.$color-primary 1px;
+
+        color: variables.$color-primary;
+
+        text-underline-offset: 2px;
+      }
+
+      &:hover {
+        text-decoration: underline variables.$color-primary 1px;
+
+        text-underline-offset: 2px;
+      }
+    }
+  }
+
+  .fs-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 0.8rem;
+  }
+
+  .fs {
+    &-label {
+      font-size: variables.$font-size-base;
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+
+      gap: variables.$spacing-s;
+    }
+
+    &-input {
+      font-size: variables.$font-size-base;
+
+      max-width: 24rem;
+      height: 2.5rem;
+      padding: variables.$spacing variables.$spacing-s;
+      padding-left: variables.$spacing;
+
+      border: 1px solid #b5b4b4;
+      border-radius: variables.$size-s;
+    }
+
+    &-textarea {
+      font-family: variables.$font-body;
+      font-size: variables.$font-size-base;
+
+      height: 10rem;
+      padding: variables.$spacing variables.$spacing-s;
+      padding-left: variables.$spacing;
+
+      resize: none;
+
+      border: 1px solid #b5b4b4;
+      border-radius: variables.$size-s;
+    }
+
+    &-input,
+    &-textarea {
+      &:hover {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.07);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px variables.$color-primary;
+      }
+    }
+  }
+
+  .input-error::placeholder {
+    opacity: 0.6;
+    color: #ba2e2e;
+  }
+
+  .g-recaptcha {
+    transform: scale(0.85);
+    transform-origin: left center;
+  }
+
+  .fs-button-group {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    gap: variables.$spacing;
+
+    .fs-button {
+      font-family: variables.$font-body;
+      font-size: variables.$font-size-base;
+      font-weight: variables.$font-weight-semibold;
+
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      padding: variables.$spacing-s calc(variables.$spacing * 0.85);
+
+      cursor: pointer;
+
+      color: variables.$color-text;
+      border: 3px solid variables.$color-primary;
+      border-radius: variables.$size-s;
+      background-color: variables.$color-bg;
+
+      gap: 0.25rem;
+
+      &:hover {
+        color: variables.$color-bg;
+        background-color: variables.$color-primary;
+      }
+
+      .send-icon {
+        flex-shrink: 0;
+
+        width: 1.25rem;
+        height: 1.25rem;
+
+        transform: translateY(1px);
+      }
+
+      &:hover .send-icon {
+        filter: invert(1);
+      }
+
+      .submit-text {
+        font-size: variables.$font-size-base;
+        font-weight: variables.$font-weight-normal;
+      }
+    }
+  }
+
+  .toast-container {
+    position: fixed;
+    z-index: 9999;
+    right: 2rem;
+    bottom: 2rem;
+
+    max-width: calc(100vw - 4rem);
+
+    .toast {
+      font-family: variables.$font-body;
+      font-size: variables.$font-size-base;
+      line-height: 1.5;
+
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      max-width: 24rem;
+      padding: 1rem 1.5rem;
+
+      transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+      transform: translateY(20px);
+      pointer-events: none;
+
+      opacity: 0;
+      color: variables.$color-bg;
+      border-radius: variables.$size-s;
+      background-color: variables.$color-text;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+      &.success {
+        border-left: 4px solid #2ecc71;
+      }
+
+      &.error {
+        border-left: 4px solid #e74c3c;
+      }
+
+      &.show {
+        transform: translateY(0);
+        pointer-events: auto;
+
+        opacity: 1;
+      }
+    }
+  }
+}

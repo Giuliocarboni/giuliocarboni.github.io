@@ -1,0 +1,76 @@
+@use "variables";
+@use "global";
+
+footer {
+  width: 100%;
+  margin-top: 6rem;
+  padding: variables.$spacing-xl variables.$padding-fluid;
+
+  background-color: variables.$color-primary;
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: variables.$content-width;
+    margin: 0 auto;
+
+    gap: variables.$spacing;
+  }
+
+  .footer-social-links {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0;
+      padding: 0;
+
+      gap: variables.$spacing-s;
+    }
+
+    li {
+      display: flex;
+    }
+
+    a {
+      font-size: variables.$font-size-xl;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+
+      opacity: 0.8;
+      color: variables.$color-bg;
+
+      &:hover {
+        transform: scale(1.15);
+
+        opacity: 1;
+      }
+    }
+
+    .fa-brands {
+      color: variables.$color-bg;
+    }
+  }
+
+  .copyright {
+    font-size: variables.$font-size-s;
+    font-weight: variables.$font-weight-normal;
+
+    margin: 0;
+
+    text-align: center;
+
+    opacity: 0.7;
+    color: variables.$color-bg;
+  }
+}

@@ -1,0 +1,60 @@
+@use "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+
+  scrollbar-gutter: stable;
+
+  @media (max-width: 768px) {
+    overflow-y: auto;
+
+    scrollbar-gutter: auto;
+  }
+}
+
+html,
+body {
+  overflow-x: clip;
+
+  min-width: variables.$min-width;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: variables.$font-body;
+
+  display: flex;
+  flex-direction: column;
+
+  background: variables.$color-bg;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  &,
+  &:active,
+  &:hover,
+  &:visited {
+    text-decoration: none;
+
+    color: inherit;
+  }
+}
+
+.fa-solid,
+.fa-brands {
+  color: variables.$color-text;
+}

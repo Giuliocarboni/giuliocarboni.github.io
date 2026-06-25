@@ -1,0 +1,210 @@
+@use "variables";
+@use "global";
+@use "navbar";
+@use "footer";
+
+main {
+  font-family: variables.$font-body;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: calc(variables.$padding-fluid * 2);
+}
+
+.hero {
+  &-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    min-width: variables.$min-width;
+    max-width: variables.$content-width;
+    height: 100%;
+    margin: 0 auto;
+
+    color: variables.$color-text;
+
+    padding-inline: variables.$padding-fluid;
+  }
+
+  &-content-top {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  &-title {
+    font-size: variables.$fs-fluid-hero;
+    font-weight: variables.$font-weight-semibold;
+  }
+
+  &-subtitle {
+    font-size: variables.$fs-fluid-hero;
+    font-weight: variables.$font-weight-normal;
+
+    color: color-mix(in srgb, variables.$color-primary 85%, transparent);
+  }
+
+  &-description {
+    font-size: variables.$fs-fluid-s;
+    font-weight: variables.$font-weight-normal;
+    line-height: variables.$spacing-xl;
+
+    display: flex;
+
+    padding-top: variables.$padding-fluid;
+  }
+
+  &-actions-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    width: clamp(variables.$min-width, 100%, 100%);
+    margin-top: calc(clamp(1.69rem, 2.39vi + 1.09rem, 3rem) * 1.7);
+    margin-bottom: calc(clamp(1.69rem, 2.39vi + 1.09rem, 3rem) * 1.7);
+
+    gap: 1.5rem;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &-button {
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-semibold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14rem;
+    height: 3.2rem;
+
+    transition:
+      border-color 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
+    text-align: center;
+
+    border: 3px solid transparent;
+    border-radius: variables.$size-s;
+    background-color: variables.$color-bg;
+
+    @media (max-width: 600px) {
+      flex-shrink: 0;
+
+      width: 17rem;
+      padding: 0.8rem 1.8rem;
+    }
+
+    &.primary {
+      color: variables.$color-bg;
+      border-color: variables.$color-primary;
+      background-color: variables.$color-primary;
+
+      &:hover {
+        color: #ffffff;
+        border-color: transparent;
+        background-color: color-mix(
+          in srgb,
+          variables.$color-primary 80%,
+          transparent
+        );
+      }
+    }
+
+    &.secondary {
+      color: variables.$color-primary;
+      border-color: color-mix(
+        in srgb,
+        variables.$color-primary 80%,
+        transparent
+      );
+      background-color: variables.$color-bg;
+
+      &:hover {
+        background-color: color-mix(
+          in srgb,
+          variables.$color-primary 15%,
+          transparent
+        );
+      }
+    }
+  }
+}
+
+.skills-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  min-width: variables.$min-width;
+  max-width: variables.$content-width;
+  height: 100%;
+  margin: 0 auto;
+  padding-right: variables.$padding-fluid;
+  padding-left: variables.$padding-fluid;
+
+  &-text {
+    font-size: variables.$fs-fluid-s;
+    font-weight: variables.$font-weight-normal;
+
+    display: flex;
+
+    width: 100%;
+
+    color: variables.$color-text;
+  }
+}
+
+.skill-cell-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 100%;
+  margin-top: variables.$spacing;
+}
+
+.skill-cell {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 10rem;
+  height: 3rem;
+  margin: variables.$spacing-s;
+  padding: variables.$spacing-s variables.$spacing;
+
+  border-radius: variables.$size-s;
+  background-color: #eaeaeaac;
+
+  gap: variables.$spacing-s;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    width: 6rem;
+    height: 5rem;
+  }
+}
+
+.skill-img {
+  width: 30px;
+  height: 30px;
+
+  border-radius: variables.$size-xxs;
+
+  object-fit: contain;
+}
