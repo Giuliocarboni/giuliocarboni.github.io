@@ -16,13 +16,14 @@ main {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    color: variables.$color-text;
 
     width: 100%;
     min-width: variables.$min-width;
     max-width: variables.$content-width;
     height: 100%;
     margin: 0 auto;
+
+    color: variables.$color-text;
 
     padding-inline: variables.$padding-fluid;
     gap: 1.6rem;

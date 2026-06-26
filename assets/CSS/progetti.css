@@ -5,7 +5,7 @@
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-gutter: stable;
 }
 @media (max-width: 768px) {
@@ -20,8 +20,7 @@ body {
   overflow-x: clip;
   min-width: 18.75rem;
   max-width: 100%;
-  min-height: 100vh;
-  margin: 0;
+  min-height: 100dvh;
   scroll-behavior: smooth;
 }
 
@@ -39,6 +38,13 @@ ul {
 a, a:active, a:hover, a:visited {
   text-decoration: none;
   color: inherit;
+}
+a:focus-visible {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.5rem;
+  outline: 2px solid #015551;
+  outline-offset: 4px;
 }
 
 .fa-solid,
@@ -65,7 +71,7 @@ header {
   align-items: center;
   width: 100%;
   min-width: 18.75rem;
-  height: 4rem;
+  height: 100%;
   margin: 0 auto;
   color: #353535;
   background-color: #d8e8e9;
@@ -195,6 +201,10 @@ header {
   transition: color 0.4s ease;
   gap: 0.5rem;
 }
+.pages a.active .fa-solid,
+.pages a.active .navbar-text {
+  color: #015551;
+}
 @media (max-width: 480px) {
   .pages a {
     flex-direction: column;
@@ -204,10 +214,6 @@ header {
   }
   .pages a::after {
     display: none;
-  }
-  .pages a.active .fa-solid,
-  .pages a.active .navbar-text {
-    color: #015551;
   }
 }
 .pages .fa-solid {
@@ -226,7 +232,7 @@ header {
     font-weight: 600;
     line-height: 1;
     display: block;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
   }
 }
 

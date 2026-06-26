@@ -24,7 +24,7 @@ header {
 
   width: 100%;
   min-width: variables.$min-width;
-  height: 4rem;
+  height: 100%;
   margin: 0 auto;
 
   color: variables.$color-text;
@@ -173,6 +173,13 @@ header {
 
     gap: variables.$spacing-s;
 
+    &.active {
+      .fa-solid,
+      .navbar-text {
+        color: variables.$color-primary;
+      }
+    }
+
     @media (max-width: 480px) {
       flex-direction: column;
 
@@ -182,13 +189,6 @@ header {
 
       &::after {
         display: none;
-      }
-
-      &.active {
-        .fa-solid,
-        .navbar-text {
-          color: variables.$color-primary;
-        }
       }
     }
   }
@@ -212,7 +212,7 @@ header {
 
       display: block;
 
-      letter-spacing: 0.05em;
+      letter-spacing: 0.05rem;
     }
   }
 }

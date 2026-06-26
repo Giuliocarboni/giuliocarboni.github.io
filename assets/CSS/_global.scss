@@ -7,7 +7,7 @@
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
 
   scrollbar-gutter: stable;
 
@@ -24,8 +24,7 @@ body {
 
   min-width: variables.$min-width;
   max-width: 100%;
-  min-height: 100vh;
-  margin: 0;
+  min-height: 100dvh;
 
   scroll-behavior: smooth;
 }
@@ -51,6 +50,15 @@ a {
     text-decoration: none;
 
     color: inherit;
+  }
+
+  &:focus-visible {
+    text-decoration: none;
+
+    color: inherit;
+    border-radius: variables.$size-s;
+    outline: 2px solid variables.$color-primary;
+    outline-offset: 4px;
   }
 }
 
