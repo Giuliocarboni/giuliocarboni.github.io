@@ -397,8 +397,7 @@ main {
   width: 100%;
   color: #353535;
 }
-
-.skill-cell-container {
+.skills-section .skill-cell-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -406,8 +405,7 @@ main {
   max-width: 100%;
   margin-top: 1rem;
 }
-
-.skill-cell {
+.skills-section .skill-cell-container .skill-cell {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -421,16 +419,15 @@ main {
   gap: 0.5rem;
 }
 @media (max-width: 600px) {
-  .skill-cell {
+  .skills-section .skill-cell-container .skill-cell {
     flex-direction: column;
     width: 6rem;
     height: 5rem;
   }
 }
-
-.skill-img {
-  width: 30px;
-  height: 30px;
+.skills-section .skill-cell-container .skill-cell .skill-img {
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 0.2rem;
   -o-object-fit: contain;
      object-fit: contain;

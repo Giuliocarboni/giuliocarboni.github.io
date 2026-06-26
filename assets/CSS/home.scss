@@ -164,47 +164,47 @@ main {
 
     color: variables.$color-text;
   }
-}
 
-.skill-cell-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  .skill-cell-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
-  max-width: 100%;
-  margin-top: variables.$spacing;
-}
+    max-width: 100%;
+    margin-top: variables.$spacing;
 
-.skill-cell {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+    .skill-cell {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
 
-  width: 10rem;
-  height: 3rem;
-  margin: variables.$spacing-s;
-  padding: variables.$spacing-s variables.$spacing;
+      width: 10rem;
+      height: 3rem;
+      margin: variables.$spacing-s;
+      padding: variables.$spacing-s variables.$spacing;
 
-  border-radius: variables.$size-s;
-  background-color: #eaeaeaac;
+      border-radius: variables.$size-s;
+      background-color: #eaeaeaac;
 
-  gap: variables.$spacing-s;
+      gap: variables.$spacing-s;
 
-  @media (max-width: 600px) {
-    flex-direction: column;
+      @media (max-width: 600px) {
+        flex-direction: column;
 
-    width: 6rem;
-    height: 5rem;
+        width: 6rem;
+        height: 5rem;
+      }
+
+      .skill-img {
+        width: 1.875rem;
+        height: 1.875rem;
+
+        border-radius: variables.$size-xxs;
+
+        object-fit: contain;
+      }
+    }
   }
-}
-
-.skill-img {
-  width: 30px;
-  height: 30px;
-
-  border-radius: variables.$size-xxs;
-
-  object-fit: contain;
 }
