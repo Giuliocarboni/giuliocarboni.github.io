@@ -5,6 +5,7 @@
 
 main {
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
 
   padding-top: calc(variables.$padding-fluid * 2);

@@ -290,6 +290,7 @@ footer .copyright {
 main {
   font-family: "Figtree", sans-serif;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
   padding-top: calc(clamp(1.1rem, 0.85rem + 1.25vw, 2rem) * 2);
 }
