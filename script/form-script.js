@@ -11,21 +11,18 @@ inputs.forEach((input) => {
     }
   });
 
-  // Ottimizzazione UX: Rimuove l'errore dinamicamente mentre l'utente scrive
   input.addEventListener("focus", function () {
     this.classList.remove("input-error");
     this.placeholder = this.dataset.originalPlaceholder;
   });
 });
 
-// Inizializzazione EmailJS
 emailjs.init({
   publicKey: "IvHqYaMH_Vi6tGikO",
 });
 
 const form = document.getElementById("contact-form");
 
-// Il codice del form viene eseguito SOLO se il form esiste nella pagina corrente
 if (form) {
   const submitBtn = form.querySelector('button[type="submit"]');
   let toastTimeout;
@@ -40,10 +37,8 @@ if (form) {
 
     toastMessage.textContent = messaggio;
 
-    // Sicuro: rimuove solo le classi di stato senza distruggere le altre
     toast.classList.remove("success", "error", "show");
 
-    // Forza il rinfresco del rendering del browser (per far ripartire eventuali animazioni CSS)
     void toast.offsetWidth;
 
     toast.classList.add(tipo, "show");
@@ -70,7 +65,6 @@ if (form) {
       return;
     }
 
-    // 🛡️ Sicurezza: Controllo防 crash se reCAPTCHA viene bloccato da AdBlock
     if (typeof grecaptcha === "undefined") {
       showToast(
         "Errore di sicurezza: reCAPTCHA non caricato. Disattiva eventuali blocchi pubblicitari o verifica la tua connessione.",
@@ -87,7 +81,7 @@ if (form) {
     }
 
     submitBtn.disabled = true;
-    const originalBtnText = submitBtn.innerHTML;
+    const originalBtnText = submitBtn.textContent;
     submitBtn.textContent = "Invio in corso...";
 
     emailjs
@@ -105,7 +99,7 @@ if (form) {
         console.error("EmailJS Error:", error);
       })
       .finally(() => {
-        submitBtn.innerHTML = originalBtnText;
+        submitBtn.textContent = originalBtnText;
         submitBtn.disabled = false;
       });
   });

@@ -415,15 +415,6 @@ main .fs-button-group .fs-button:hover {
   color: #ffffff;
   background-color: #015551;
 }
-main .fs-button-group .fs-button .send-icon {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  transform: translateY(1px);
-}
-main .fs-button-group .fs-button:hover .send-icon {
-  filter: invert(1);
-}
 main .fs-button-group .fs-button .submit-text {
   font-size: 1rem;
   font-weight: 400;

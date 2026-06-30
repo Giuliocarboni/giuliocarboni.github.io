@@ -174,19 +174,6 @@ main {
         background-color: variables.$color-primary;
       }
 
-      .send-icon {
-        flex-shrink: 0;
-
-        width: 1.25rem;
-        height: 1.25rem;
-
-        transform: translateY(1px);
-      }
-
-      &:hover .send-icon {
-        filter: invert(1);
-      }
-
       .submit-text {
         font-size: variables.$font-size-base;
         font-weight: variables.$font-weight-normal;
