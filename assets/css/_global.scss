@@ -1,0 +1,68 @@
+@use "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: auto;
+
+  scrollbar-gutter: stable;
+
+  @media (max-width: 768px) {
+    overflow-y: auto;
+
+    scrollbar-gutter: auto;
+  }
+}
+
+html,
+body {
+  overflow-x: clip;
+
+  min-width: variables.$min-width;
+  max-width: 100%;
+  min-height: 100dvh;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: variables.$font-body;
+
+  display: flex;
+  flex-direction: column;
+
+  background: variables.$color-bg;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  &,
+  &:active,
+  &:hover,
+  &:visited {
+    text-decoration: none;
+
+    color: inherit;
+  }
+
+  &:focus-visible {
+    text-decoration: none;
+
+    color: inherit;
+    border-radius: variables.$size-s;
+    outline: 2px solid #f58549;
+    outline-offset: 4px;
+  }
+}
+
+.fa-solid,
+.fa-brands {
+  color: variables.$color-text;
+}
