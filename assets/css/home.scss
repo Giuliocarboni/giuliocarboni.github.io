@@ -1,7 +1,6 @@
 @use "variables";
 @use "global";
-@use "navbar";
-@use "footer";
+@use "layout";
 
 main {
   font-family: variables.$font-body;
@@ -44,6 +43,7 @@ main {
   }
 
   &-subtitle {
+    display: block;
     font-size: variables.$fs-fluid-hero;
     font-weight: variables.$font-weight-normal;
 

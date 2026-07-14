@@ -1,7 +1,6 @@
 @use "variables";
 @use "global";
-@use "navbar";
-@use "footer";
+@use "layout";
 
 main {
   display: flex;

@@ -318,6 +318,7 @@ main {
   font-weight: 600;
 }
 .hero-subtitle {
+  display: block;
   font-size: clamp(2rem, 1.25rem + 2.75vi, 3.2rem);
   font-weight: 400;
   color: color-mix(in srgb, #015551 85%, transparent);
