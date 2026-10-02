@@ -263,11 +263,11 @@ footer {
         transform 0.25s ease,
         opacity 0.25s ease;
 
-      opacity: 0.8;
+      opacity: 0.7;
       color: variables.$color-bg;
 
       &:hover {
-        transform: scale(1.15);
+        color: variables.$color-bg;
 
         opacity: 1;
       }
