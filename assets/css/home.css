@@ -5,7 +5,7 @@
 }
 
 html {
-  overflow-y: auto;
+  overflow-y: scroll;
   scrollbar-gutter: stable;
 }
 @media (max-width: 768px) {
