@@ -60,8 +60,6 @@ main {
     max-width: 24rem;
     padding: 0 0 1.5rem 0;
 
-    cursor: pointer;
-
     border-radius: variables.$size-s;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 
@@ -106,6 +104,18 @@ main {
       .project-text-description {
         font-size: variables.$font-size-base;
         font-weight: variables.$font-weight-semibold;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1rem;
+
+        a {
+          font-size: variables.$font-size-base;
+          font-weight: variables.$font-weight-semibold;
+          color: variables.$color-primary;
+        }
       }
     }
   }

@@ -332,7 +332,6 @@ main .project-cell {
   width: 100%;
   max-width: 24rem;
   padding: 0 0 1.5rem 0;
-  cursor: pointer;
   border-radius: 0.5rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   gap: 0.8rem;
@@ -367,4 +366,14 @@ main .project-cell .project-text-container .project-text-title {
 main .project-cell .project-text-container .project-text-description {
   font-size: 1rem;
   font-weight: 600;
+}
+main .project-cell .project-text-container .project-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+main .project-cell .project-text-container .project-links a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #015551;
 }/*# sourceMappingURL=progetti.css.map */
