@@ -86,7 +86,7 @@ main {
     justify-content: center;
 
     width: 14rem;
-    height: 3.2rem;
+    height: 3.5rem;
 
     transition:
       border-color 0.3s ease,
@@ -113,11 +113,7 @@ main {
       &:hover {
         color: #ffffff;
         border-color: transparent;
-        background-color: color-mix(
-          in srgb,
-          variables.$color-primary 80%,
-          transparent
-        );
+        background-color: variables.$color-primary-hover;
       }
     }
 
@@ -133,7 +129,7 @@ main {
       &:hover {
         background-color: color-mix(
           in srgb,
-          variables.$color-primary 15%,
+          variables.$color-primary 3%,
           transparent
         );
       }
@@ -187,9 +183,11 @@ main {
       padding: variables.$spacing-s variables.$spacing;
 
       border-radius: variables.$size-s;
-      background-color: #eaeaeaac;
+      background-color: variables.$color-bg;
 
       gap: variables.$spacing-s;
+
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 
       @media (max-width: 600px) {
         flex-direction: column;

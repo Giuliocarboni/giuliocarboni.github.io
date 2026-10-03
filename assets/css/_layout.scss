@@ -11,12 +11,12 @@ header {
   justify-content: center;
 
   width: 100%;
-  height: 4rem;
+  height: 5rem;
 }
 
 .navbar {
   font-family: variables.$font-body;
-  font-size: variables.$font-size-l;
+  font-size: variables.$font-size-xl;
   font-weight: variables.$font-weight-bold;
 
   display: grid;
@@ -28,9 +28,10 @@ header {
   margin: 0 auto;
 
   color: variables.$color-text;
-  background-color: variables.$color-secondary;
+  background-color: variables.$color-bg;
 
   grid-template-columns: 1fr auto 1fr;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 
   @media (max-width: 480px) {
     display: flex;
@@ -253,7 +254,7 @@ footer {
     }
 
     a {
-      font-size: variables.$font-size-xl;
+      font-size: variables.$font-size-2xl;
 
       display: inline-flex;
       align-items: center;

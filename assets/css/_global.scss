@@ -59,7 +59,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  background: variables.$color-bg;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), variables.$color-secondary);
 }
 
 ul {
