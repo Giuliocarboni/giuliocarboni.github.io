@@ -19,11 +19,10 @@ main {
 
     width: 100%;
     min-width: variables.$min-width;
-    max-width: variables.$content-width;
     height: 100%;
     margin: 0 auto;
 
-    color: variables.$color-text;
+    color: variables.$color-secondary;
 
     padding-inline: variables.$padding-fluid;
     gap: 1.6rem;
@@ -56,24 +55,36 @@ main {
     .booking-link {
       &,
       &:visited {
-        text-decoration: underline variables.$color-primary 1px;
+        text-decoration: underline variables.$color-tertiary 1px;
 
-        color: variables.$color-primary;
-
-        text-underline-offset: 2px;
-      }
-
-      &:hover {
-        text-decoration: underline variables.$color-primary 1px;
+        color: variables.$color-tertiary;
 
         text-underline-offset: 2px;
       }
     }
   }
 
+  .container-contatti {
+    display: grid;
+    align-items: start;
+
+    width: 100%;
+    margin: 0 auto;
+
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
   .fs-form {
     display: flex;
     flex-direction: column;
+
+    margin-top: 1.5rem;
 
     width: 100%;
 
@@ -94,8 +105,10 @@ main {
 
     &-input {
       font-size: variables.$font-size-base;
+      background-color: variables.$color-bg;
+      color: variables.$color-secondary;
 
-      max-width: 24rem;
+      max-width: 30rem;
       height: 2.5rem;
       padding: variables.$spacing variables.$spacing-s;
       padding-left: variables.$spacing;
@@ -107,6 +120,8 @@ main {
     &-textarea {
       font-family: variables.$font-body;
       font-size: variables.$font-size-base;
+      background-color: variables.$color-bg;
+      color: variables.$color-secondary;
 
       height: 10rem;
       padding: variables.$spacing variables.$spacing-s;
@@ -126,7 +141,7 @@ main {
 
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 2px variables.$color-primary;
+        box-shadow: 0 0 0 2px variables.$color-secondary;
       }
     }
   }
@@ -157,20 +172,24 @@ main {
       align-items: center;
       flex-direction: row;
 
-      padding: variables.$spacing-s calc(variables.$spacing * 0.85);
+      padding: variables.$spacing-s calc(variables.$spacing * 1.5);
 
       cursor: pointer;
 
-      color: variables.$color-text;
-      border: 3px solid variables.$color-primary;
+      color: variables.$color-secondary;
+      border: 1px solid variables.$color-secondary;
       border-radius: variables.$size-s;
       background-color: variables.$color-bg;
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 
       gap: 0.25rem;
 
       &:hover {
         color: variables.$color-bg;
-        background-color: variables.$color-primary;
+        background-color: variables.$color-secondary;
       }
 
       .submit-text {
@@ -207,10 +226,9 @@ main {
       pointer-events: none;
 
       opacity: 0;
-      color: variables.$color-bg;
+      color: variables.$color-secondary;
       border-radius: variables.$size-s;
-      background-color: variables.$color-text;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background-color: variables.$color-bg;
 
       &.success {
         border-left: 4px solid #2ecc71;

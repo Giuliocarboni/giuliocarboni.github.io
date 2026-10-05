@@ -17,10 +17,14 @@
     <meta property="og:url" content="https://giuliocarboni.github.io/" />
     <meta property="og:type" content="website" />
     <link href="./assets/css/home.css" rel="stylesheet" />
+    <link href="./assets/css/progetti.css" rel="stylesheet" />
+    <link href="./assets/css/contatti.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -43,15 +47,16 @@
       sizes="16x16"
       type="image/png" />
     <link href="./assets/images/favicon/site.webmanifest" rel="manifest" />
+    <script defer src="./script/form-script.js"></script>
     <script type="module" src="./script/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      type="text/javascript"></script>
+    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar" id="navbar">
-        <div class="home">
-          <a href="#"><span>Giulio Carboni</span></a>
-        </div>
-
         <div class="pages">
           <ul>
             <li>
@@ -61,43 +66,15 @@
               </a>
             </li>
             <li>
-              <a href="./progetti/">
+              <a href="#progetti">
                 <i class="fa-solid fa-code"></i>
                 <span class="navbar-text">Progetti</span>
               </a>
             </li>
-            <!-- <li>
-              <a href>
-                <i class="fa-solid fa-file-lines"></i>
-                <span class="navbar-text">Blog</span>
-              </a>
-            </li> -->
             <li>
-              <a href="./contatti/">
+              <a href="#contatti">
                 <i class="fa-solid fa-at"></i>
                 <span class="navbar-text">Contatti</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="social-links">
-          <ul>
-            <li>
-              <a
-                href="https://github.com/Giuliocarboni"
-                rel="noopener"
-                target="_blank">
-                <i class="fa-brands fa-github"></i>
-                <span class="navbar-text">GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/giulio-carboni-6a926a41b/?skipRedirect=true"
-                rel="noopener"
-                target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-                <span class="navbar-text">LinkedIn</span>
               </a>
             </li>
           </ul>
@@ -105,69 +82,186 @@
       </nav>
     </header>
     <main>
-      <section class="hero-section">
-        <div class="hero-content-top">
-          <h1 class="hero-title">
-            Giulio Carboni
-            <span class="hero-subtitle">Front-End Developer</span>
-          </h1>
-          <p class="hero-description">
-            Costruisco interfacce web veloci e accessibili utilizzando un
-            ecosistema di strumenti moderno e scalabile.
-          </p>
-        </div>
-        <div class="hero-actions-bottom">
-          <a class="hero-button primary" href="./progetti/">
-            Guarda i miei progetti
-          </a>
-          <a class="hero-button secondary" href="./contatti/">Contattami</a>
+      <section class="hero-section" id="home">
+        <div class="container-hero">
+          <div class="hero-content-top">
+            <h1 class="hero-title">
+              Ciao! Sono Giulio Carboni,
+              <span class="hero-subtitle">Front-End Developer</span>
+            </h1>
+
+            <p class="hero-description">
+              Costruisco interfacce web veloci e accessibili utilizzando un
+              ecosistema di strumenti moderno e scalabile.
+            </p>
+            <div class="social-links">
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/Giuliocarboni"
+                    rel="noopener"
+                    target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/giulio-carboni-6a926a41b/?skipRedirect=true"
+                    rel="noopener"
+                    target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section class="skills-section">
-        <h2 class="skills-section-text">Il mio tech stack:</h2>
-        <div class="skill-cell-container">
-          <div class="skill-cell">
-            <img
-              alt="Logo HTML"
-              class="skill-img"
-              src="./assets/images/skills/html.svg" />
-            <span class="skill-text">HTML</span>
+        <div class="container-skills">
+          <h2 class="skills-section-text">Il mio tech stack:</h2>
+          <div class="skill-cell-container">
+            <div class="skill-cell">
+              <img
+                alt="Logo HTML"
+                class="skill-img"
+                src="./assets/images/skills/html.svg" />
+              <span class="skill-text">HTML</span>
+            </div>
+            <div class="skill-cell">
+              <img
+                alt="Logo CSS"
+                class="skill-img"
+                src="./assets/images/skills/css.svg" />
+              <span class="skill-text">CSS</span>
+            </div>
+            <div class="skill-cell">
+              <img
+                alt="Logo Sass"
+                class="skill-img"
+                src="./assets/images/skills/sass.svg" />
+              <span class="skill-text">Sass</span>
+            </div>
+            <div class="skill-cell">
+              <img
+                alt="Logo JavaScript"
+                class="skill-img"
+                src="./assets/images/skills/js.svg" />
+              <span class="skill-text">JavaScript</span>
+            </div>
+            <div class="skill-cell">
+              <img
+                alt="Logo React"
+                class="skill-img"
+                src="./assets/images/skills/react.svg" />
+              <span class="skill-text">React</span>
+            </div>
+            <div class="skill-cell">
+              <img
+                alt="Logo Git"
+                class="skill-img"
+                src="./assets/images/skills/git.svg" />
+              <span class="skill-text">Git</span>
+            </div>
           </div>
-          <div class="skill-cell">
-            <img
-              alt="Logo CSS"
-              class="skill-img"
-              src="./assets/images/skills/css.svg" />
-            <span class="skill-text">CSS</span>
+        </div>
+      </section>
+      <section class="projects-section" id="progetti">
+        <div class="container-progetti">
+          <div class="projects-section-text">
+            <span class="projects-section-text-title"
+              >Progetti in evidenza</span
+            >
           </div>
-          <div class="skill-cell">
-            <img
-              alt="Logo Sass"
-              class="skill-img"
-              src="./assets/images/skills/sass.svg" />
-            <span class="skill-text">Sass</span>
+          <div class="projects-cells-container">
+            <article class="project-cell">
+              <!--  <div class="project-img-container">
+              <img
+                loading="lazy"
+                alt="Immagine progetto 1"
+                class="project-img"
+                src="../assets/images/projects/progetto-1.png" />
+            </div> -->
+              <div class="project-text-container">
+                <h3 class="project-text-title">API REST</h3>
+                <p class="project-text-description">
+                  Fetch asincrono di dati da API esterne, rendering dinamico e
+                  stato dell'interfaccia gestiti in Vanilla JS.
+                </p>
+                <p class="project-links">
+                  <a
+                    href="https://owlyjs.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Demo live</a
+                  >
+                  <a
+                    href="https://github.com/Giuliocarboni/js-advanced-owly"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Repository GitHub</a
+                  >
+                </p>
+              </div>
+            </article>
           </div>
-          <div class="skill-cell">
-            <img
-              alt="Logo JavaScript"
-              class="skill-img"
-              src="./assets/images/skills/js.svg" />
-            <span class="skill-text">JavaScript</span>
+        </div>
+      </section>
+      <section class="contact-section" id="contatti">
+        <div class="container-contatti">
+          <div class="contact-section-text">
+            <span class="contact-section-text-title">Contatti</span>
+            <span class="contact-section-text-subtitle"
+              >Puoi scrivermi un messaggio veloce compilando il modulo qui
+              sotto, oppure, se preferisci, puoi prenotare direttamente una
+              chiamata conoscitiva
+              <a
+                class="booking-link"
+                href="https://www.cal.eu/giuliocarboni/30min"
+                rel="noopener noreferrer"
+                target="_blank">
+                <b>cliccando qui</b></a
+              >.</span
+            >
           </div>
-          <div class="skill-cell">
-            <img
-              alt="Logo React"
-              class="skill-img"
-              src="./assets/images/skills/react.svg" />
-            <span class="skill-text">React</span>
-          </div>
-          <div class="skill-cell">
-            <img
-              alt="Logo Git"
-              class="skill-img"
-              src="./assets/images/skills/git.svg" />
-            <span class="skill-text">Git</span>
-          </div>
+          <form class="fs-form" id="contact-form" novalidate>
+            <input
+              aria-label="Nome completo"
+              autocomplete="name"
+              class="fs-input"
+              maxlength="50"
+              name="name"
+              placeholder="Nome"
+              required
+              type="text" />
+            <input
+              aria-label="Indirizzo Email"
+              autocomplete="email"
+              class="fs-input"
+              name="email"
+              placeholder="Email"
+              required
+              type="email" />
+            <textarea
+              aria-label="Testo del messaggio"
+              class="fs-textarea"
+              maxlength="10000"
+              name="message"
+              placeholder="Il tuo messaggio"
+              required></textarea>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LclQ9stAAAAAJwop2Mhc9Xs7K9C3-AIGQFkb1xp"></div>
+            <div class="fs-button-group">
+              <button class="fs-button" type="submit">Invio</button>
+              <span class="submit-text"></span>
+              <div class="toast-container" id="toast-container">
+                <div class="toast" id="toast">
+                  <span id="toast-message"></span>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>

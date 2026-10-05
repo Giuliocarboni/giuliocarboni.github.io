@@ -12,22 +12,6 @@ html {
 html:hover {
   scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
 }
-html::-webkit-scrollbar {
-  width: 8px;
-}
-html::-webkit-scrollbar-track {
-  background: transparent;
-}
-html::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: transparent;
-}
-html:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-html::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
 @media (max-width: 768px) {
   html {
     overflow-y: auto;
@@ -44,10 +28,10 @@ body {
 }
 
 body {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), #d8e8e9);
+  background: #1a1a1b;
 }
 
 ul {
@@ -68,7 +52,30 @@ a:focus-visible {
 
 .fa-solid,
 .fa-brands {
-  color: #353535;
+  color: #222121;
+}
+
+section {
+  width: 100%;
+}
+
+.container-hero,
+.container-skills,
+.container-progetti,
+.container-contatti {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-inline: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
+}
+
+section + section::before {
+  display: block;
+  width: min(100%, 80rem);
+  height: 1px;
+  margin: 3rem auto;
+  content: "";
+  background: #474645;
 }
 
 header {
@@ -83,23 +90,22 @@ header {
 }
 
 .navbar {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
-  font-weight: 700;
-  grid-template-columns: 1fr auto 1fr;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  font-weight: 400;
   display: grid;
   align-items: center;
+  justify-content: center;
   width: 100%;
   min-width: 18.75rem;
   height: 100%;
   margin: 0 auto;
-  color: #353535;
-  background-color: #ffffff;
   transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
+  color: #d4d0ca;
+  background-color: #1a1a1b;
 }
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(26, 26, 27, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -111,16 +117,12 @@ header {
   }
 }
 
-.home a,
-.pages a,
-.social-links a {
+.pages a {
   position: relative;
   display: inline-flex;
   align-items: center;
 }
-.home a::before,
-.pages a::before,
-.social-links a::before {
+.pages a::before {
   position: absolute;
   top: 50%;
   right: -8px;
@@ -128,26 +130,6 @@ header {
   height: 4rem;
   content: "";
   transform: translateY(-50%);
-}
-.home a::after,
-.pages a::after,
-.social-links a::after {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  content: "";
-  transition: transform 0.25s ease-out;
-  transform: scaleX(0) translateZ(0);
-  transform-origin: center;
-  background-color: #353535;
-  will-change: transform;
-}
-.home a:hover::after,
-.pages a:hover::after,
-.social-links a:hover::after {
-  transform: scaleX(1) translateZ(0);
 }
 
 .home {
@@ -159,29 +141,6 @@ header {
   .home {
     display: none;
   }
-}
-
-.social-links {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
-}
-@media (max-width: 1024px) {
-  .social-links .navbar-text {
-    display: none;
-  }
-}
-@media (max-width: 480px) {
-  .social-links {
-    display: none;
-  }
-}
-.social-links ul {
-  display: flex;
-  gap: 1rem;
-}
-.social-links a {
-  gap: 0.15rem;
 }
 
 .pages {
@@ -199,7 +158,7 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 @media (max-width: 480px) {
   .pages ul {
@@ -229,7 +188,7 @@ header {
 }
 .pages a.active .fa-solid,
 .pages a.active .navbar-text {
-  color: #015551;
+  font-weight: 700;
 }
 @media (max-width: 480px) {
   .pages a {
@@ -264,16 +223,16 @@ header {
 
 footer {
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 2rem;
   padding: 2rem clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
-  background-color: #015551;
+  background-color: #1a1a1b;
 }
 footer .footer-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  max-width: 52rem;
+  max-width: 60rem;
   margin: 0 auto;
   gap: 1rem;
 }
@@ -295,14 +254,14 @@ footer .footer-social-links a {
   justify-content: center;
   transition: transform 0.25s ease, opacity 0.25s ease;
   opacity: 0.7;
-  color: #ffffff;
+  color: #d4d0ca;
 }
 footer .footer-social-links a:hover {
-  color: #ffffff;
   opacity: 1;
+  color: #d4d0ca;
 }
 footer .footer-social-links .fa-brands {
-  color: #ffffff;
+  color: #d4d0ca;
 }
 footer .copyright {
   font-size: 0.875rem;
@@ -310,7 +269,16 @@ footer .copyright {
   margin: 0;
   text-align: center;
   opacity: 0.7;
-  color: #ffffff;
+  color: #d4d0ca;
+}
+
+footer:before {
+  display: block;
+  width: min(100%, 80rem);
+  height: 1px;
+  margin: 3rem auto;
+  content: "";
+  background: #474645;
 }
 
 main {
@@ -320,17 +288,16 @@ main {
   padding-top: calc(clamp(1.1rem, 0.85rem + 1.25vw, 2rem) * 2);
 }
 main .contact-section {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   min-width: 18.75rem;
-  max-width: 52rem;
   height: 100%;
   margin: 0 auto;
-  color: #353535;
+  color: #d4d0ca;
   padding-inline: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
   gap: 1.6rem;
 }
@@ -354,19 +321,29 @@ main .contact-section .contact-section-text-subtitle {
   padding-top: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
 }
 main .contact-section .booking-link, main .contact-section .booking-link:visited {
-  -webkit-text-decoration: underline #015551 1px;
-          text-decoration: underline #015551 1px;
-  color: #015551;
+  -webkit-text-decoration: underline #bebeb8 1px;
+          text-decoration: underline #bebeb8 1px;
+  color: #bebeb8;
   text-underline-offset: 2px;
 }
-main .contact-section .booking-link:hover {
-  -webkit-text-decoration: underline #015551 1px;
-          text-decoration: underline #015551 1px;
-  text-underline-offset: 2px;
+main .container-contatti {
+  display: grid;
+  align-items: start;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  main .container-contatti {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
 }
 main .fs-form {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
   width: 100%;
   gap: 0.8rem;
 }
@@ -380,7 +357,9 @@ main .fs-field {
 }
 main .fs-input {
   font-size: 1rem;
-  max-width: 24rem;
+  background-color: #1a1a1b;
+  color: #d4d0ca;
+  max-width: 30rem;
   height: 2.5rem;
   padding: 1rem 0.5rem;
   padding-left: 1rem;
@@ -388,8 +367,10 @@ main .fs-input {
   border-radius: 0.5rem;
 }
 main .fs-textarea {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  background-color: #1a1a1b;
+  color: #d4d0ca;
   height: 10rem;
   padding: 1rem 0.5rem;
   padding-left: 1rem;
@@ -402,7 +383,7 @@ main .fs-input:hover, main .fs-textarea:hover {
 }
 main .fs-input:focus, main .fs-textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #015551;
+  box-shadow: 0 0 0 2px #d4d0ca;
 }
 main .input-error::-moz-placeholder {
   opacity: 0.6;
@@ -423,23 +404,24 @@ main .fs-button-group {
   gap: 1rem;
 }
 main .fs-button-group .fs-button {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 0.5rem 0.85rem;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
-  color: #353535;
-  border: 3px solid #015551;
+  color: #d4d0ca;
+  border: 1px solid #d4d0ca;
   border-radius: 0.5rem;
-  background-color: #ffffff;
+  background-color: #1a1a1b;
+  transition: transform 0.25s ease, opacity 0.25s ease;
   gap: 0.25rem;
 }
 main .fs-button-group .fs-button:hover {
-  color: #ffffff;
-  background-color: #015551;
+  color: #1a1a1b;
+  background-color: #d4d0ca;
 }
 main .fs-button-group .fs-button .submit-text {
   font-size: 1rem;
@@ -453,7 +435,7 @@ main .toast-container {
   max-width: calc(100vw - 4rem);
 }
 main .toast-container .toast {
-  font-family: "Figtree", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   display: flex;
@@ -465,10 +447,9 @@ main .toast-container .toast {
   transform: translateY(20px);
   pointer-events: none;
   opacity: 0;
-  color: #ffffff;
+  color: #d4d0ca;
   border-radius: 0.5rem;
-  background-color: #353535;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #1a1a1b;
 }
 main .toast-container .toast.success {
   border-left: 4px solid #2ecc71;

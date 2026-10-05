@@ -17,10 +17,9 @@ main {
 
     width: 100%;
     min-width: variables.$min-width;
-    max-width: variables.$content-width;
     margin: 0 auto;
 
-    color: variables.$color-text;
+    color: variables.$color-secondary;
 
     padding-inline: variables.$padding-fluid;
   }
@@ -60,9 +59,8 @@ main {
     max-width: 24rem;
     padding: 0 0 1.5rem 0;
 
-    border: 3.1px solid #6b7e7d;
     border-radius: variables.$size;
-    background-color: variables.$color-bg;
+    background-color: variables.$color-text;
 
     gap: 0.8rem;
 
@@ -118,11 +116,12 @@ main {
           font-size: variables.$font-size-base;
           font-weight: variables.$font-weight-bold;
 
-          color: variables.$color-primary;
+          color: variables.$color-secondary;
         }
 
         @media (max-width: 600px) {
           flex-direction: column;
+
           gap: 1rem;
         }
       }

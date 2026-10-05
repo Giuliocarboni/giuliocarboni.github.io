@@ -12,6 +12,41 @@ main {
   padding-top: calc(variables.$padding-fluid * 2);
 }
 
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin-top: 1.5rem;
+  padding-right: variables.$padding-fluid;
+
+  ul {
+    display: flex;
+
+    gap: 1rem;
+  }
+
+  a {
+    font-size: variables.$font-size-2xl;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.25s ease;
+
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .fa-brands {
+    color: variables.$color-secondary;
+  }
+}
+
 .hero {
   &-section {
     display: flex;
@@ -21,11 +56,10 @@ main {
 
     width: 100%;
     min-width: variables.$min-width;
-    max-width: variables.$content-width;
     height: 100%;
     margin: 0 auto;
 
-    color: variables.$color-text;
+    color: variables.$color-secondary;
 
     padding-inline: variables.$padding-fluid;
   }
@@ -38,16 +72,19 @@ main {
   }
 
   &-title {
-    font-size: variables.$fs-fluid-hero;
-    font-weight: variables.$font-weight-semibold;
+    font-size: variables.$fs-fluid-m;
+    font-weight: variables.$font-weight-normal;
+    color: variables.$color-tertiary;
   }
 
   &-subtitle {
-    display: block;
     font-size: variables.$fs-fluid-hero;
-    font-weight: variables.$font-weight-normal;
+    font-weight: variables.$font-weight-semibold;
+    margin-top: 1rem;
 
-    color: color-mix(in srgb, variables.$color-primary 85%, transparent);
+    display: block;
+
+    color: variables.$color-secondary;
   }
 
   &-description {
@@ -59,82 +96,6 @@ main {
 
     padding-top: variables.$padding-fluid;
   }
-
-  &-actions-bottom {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-
-    width: clamp(variables.$min-width, 100%, 100%);
-    margin-top: calc(clamp(1.69rem, 2.39vi + 1.09rem, 3rem) * 1.7);
-    margin-bottom: calc(clamp(1.69rem, 2.39vi + 1.09rem, 3rem) * 1.7);
-
-    gap: 1.5rem;
-
-    @media (max-width: 600px) {
-      flex-direction: column;
-    }
-  }
-
-  &-button {
-    font-size: variables.$font-size-base;
-    font-weight: variables.$font-weight-semibold;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 14rem;
-    height: 3.5rem;
-
-    transition:
-      border-color 0.3s ease,
-      background-color 0.3s ease,
-      color 0.3s ease;
-    text-align: center;
-
-    border: 3px solid transparent;
-    border-radius: variables.$size-s;
-    background-color: variables.$color-bg;
-
-    @media (max-width: 600px) {
-      flex-shrink: 0;
-
-      width: 17rem;
-      padding: 0.8rem 1.8rem;
-    }
-
-    &.primary {
-      color: variables.$color-bg;
-      border-color: variables.$color-primary;
-      background-color: variables.$color-primary;
-
-      &:hover {
-        color: #ffffff;
-        border-color: transparent;
-        background-color: variables.$color-primary-hover;
-      }
-    }
-
-    &.secondary {
-      color: variables.$color-primary;
-      border-color: color-mix(
-        in srgb,
-        variables.$color-primary 80%,
-        transparent
-      );
-      background-color: variables.$color-bg;
-
-      &:hover {
-        background-color: color-mix(
-          in srgb,
-          variables.$color-primary 3%,
-          transparent
-        );
-      }
-    }
-  }
 }
 
 .skills-section {
@@ -145,7 +106,6 @@ main {
 
   width: 100%;
   min-width: variables.$min-width;
-  max-width: variables.$content-width;
   height: 100%;
   margin: 0 auto;
   padding-right: variables.$padding-fluid;
@@ -159,7 +119,7 @@ main {
 
     width: 100%;
 
-    color: variables.$color-text;
+    color: variables.$color-secondary;
   }
 
   .skill-cell-container {
@@ -176,18 +136,17 @@ main {
       align-items: center;
       flex-direction: row;
       justify-content: center;
+      color: variables.$color-tertiary;
+      font-weight: variables.$font-weight-semibold;
 
       width: 10rem;
       height: 3rem;
       margin: variables.$spacing-s;
       padding: variables.$spacing-s variables.$spacing;
 
-      border-radius: variables.$size-s;
       background-color: variables.$color-bg;
 
       gap: variables.$spacing-s;
-
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 
       @media (max-width: 600px) {
         flex-direction: column;
