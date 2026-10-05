@@ -101,7 +101,7 @@ header {
   height: 100%;
   margin: 0 auto;
   transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
-  color: #d4d0ca;
+  color: #e9e6e3;
   background-color: #1a1a1b;
 }
 .navbar.scrolled {
@@ -206,7 +206,7 @@ header {
 }
 @media (max-width: 480px) {
   .pages .fa-solid {
-    color: #d4d0ca;
+    color: #e9e6e3;
     font-size: 1.3rem;
     line-height: 1;
     display: inline-block;
@@ -255,14 +255,14 @@ footer .footer-social-links a {
   justify-content: center;
   transition: transform 0.25s ease, opacity 0.25s ease;
   opacity: 0.7;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 footer .footer-social-links a:hover {
   opacity: 1;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 footer .footer-social-links .fa-brands {
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 footer .copyright {
   font-size: 0.875rem;
@@ -270,7 +270,7 @@ footer .copyright {
   margin: 0;
   text-align: center;
   opacity: 0.7;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 
 footer:before {
@@ -295,7 +295,7 @@ main .projects-section {
   width: 100%;
   min-width: 18.75rem;
   margin: 0 auto;
-  color: #d4d0ca;
+  color: #e9e6e3;
   padding-inline: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
 }
 main .projects-section-text {
@@ -368,7 +368,7 @@ main .project-cell .project-text-container .project-links {
 main .project-cell .project-text-container .project-links a {
   font-size: 1rem;
   font-weight: 700;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 @media (max-width: 600px) {
   main .project-cell .project-text-container .project-links {

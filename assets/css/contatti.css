@@ -101,7 +101,7 @@ header {
   height: 100%;
   margin: 0 auto;
   transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
-  color: #d4d0ca;
+  color: #e9e6e3;
   background-color: #1a1a1b;
 }
 .navbar.scrolled {
@@ -206,7 +206,7 @@ header {
 }
 @media (max-width: 480px) {
   .pages .fa-solid {
-    color: #d4d0ca;
+    color: #e9e6e3;
     font-size: 1.3rem;
     line-height: 1;
     display: inline-block;
@@ -255,14 +255,14 @@ footer .footer-social-links a {
   justify-content: center;
   transition: transform 0.25s ease, opacity 0.25s ease;
   opacity: 0.7;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 footer .footer-social-links a:hover {
   opacity: 1;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 footer .footer-social-links .fa-brands {
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 footer .copyright {
   font-size: 0.875rem;
@@ -270,7 +270,7 @@ footer .copyright {
   margin: 0;
   text-align: center;
   opacity: 0.7;
-  color: #d4d0ca;
+  color: #e9e6e3;
 }
 
 footer:before {
@@ -297,7 +297,7 @@ main .contact-section {
   min-width: 18.75rem;
   height: 100%;
   margin: 0 auto;
-  color: #d4d0ca;
+  color: #e9e6e3;
   padding-inline: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
 }
 main .contact-section-text {
@@ -357,7 +357,7 @@ main .fs-field {
 main .fs-input {
   font-size: 1rem;
   background-color: #1a1a1b;
-  color: #d4d0ca;
+  color: #e9e6e3;
   max-width: 30rem;
   height: 2.5rem;
   padding: 1rem 0.5rem;
@@ -369,7 +369,7 @@ main .fs-textarea {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   background-color: #1a1a1b;
-  color: #d4d0ca;
+  color: #e9e6e3;
   height: 10rem;
   padding: 1rem 0.5rem;
   padding-left: 1rem;
@@ -382,7 +382,7 @@ main .fs-input:hover, main .fs-textarea:hover {
 }
 main .fs-input:focus, main .fs-textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #d4d0ca;
+  box-shadow: 0 0 0 2px #e9e6e3;
 }
 main .input-error::-moz-placeholder {
   opacity: 0.6;
@@ -411,8 +411,8 @@ main .fs-button-group .fs-button {
   flex-direction: row;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
-  color: #d4d0ca;
-  border: 1px solid #d4d0ca;
+  color: #e9e6e3;
+  border: 1px solid #e9e6e3;
   border-radius: 0.5rem;
   background-color: #1a1a1b;
   transition: transform 0.25s ease, opacity 0.25s ease;
@@ -420,7 +420,7 @@ main .fs-button-group .fs-button {
 }
 main .fs-button-group .fs-button:hover {
   color: #1a1a1b;
-  background-color: #d4d0ca;
+  background-color: #e9e6e3;
 }
 main .fs-button-group .fs-button .submit-text {
   font-size: 1rem;
@@ -446,7 +446,7 @@ main .toast-container .toast {
   transform: translateY(20px);
   pointer-events: none;
   opacity: 0;
-  color: #d4d0ca;
+  color: #e9e6e3;
   border-radius: 0.5rem;
   background-color: #1a1a1b;
 }
