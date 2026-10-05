@@ -86,6 +86,8 @@ header {
   font-family: "Figtree", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
+  grid-template-columns: 1fr auto 1fr;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   display: grid;
   align-items: center;
   width: 100%;
@@ -94,8 +96,12 @@ header {
   margin: 0 auto;
   color: #353535;
   background-color: #ffffff;
-  grid-template-columns: 1fr auto 1fr;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 @media (max-width: 480px) {
   .navbar {
@@ -331,7 +337,7 @@ main .projects-section-text {
   width: 100%;
 }
 main .projects-section-text-title {
-  font-size: clamp(2rem, 1.25rem + 2.75vi, 4.5rem);
+  font-size: clamp(2rem, 1.25rem + 4.75vi, 4.5rem);
   font-weight: 600;
 }
 main .projects-cells-container {
@@ -352,7 +358,7 @@ main .project-cell {
   width: 100%;
   max-width: 24rem;
   padding: 0 0 1.5rem 0;
-  border: 3.1px solid #015551;
+  border: 3.1px solid #6b7e7d;
   border-radius: 1rem;
   background-color: #ffffff;
   gap: 0.8rem;
@@ -386,7 +392,7 @@ main .project-cell .project-text-container .project-text-title {
 }
 main .project-cell .project-text-container .project-text-description {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 main .project-cell .project-text-container .project-links {
   display: flex;
@@ -395,13 +401,12 @@ main .project-cell .project-text-container .project-links {
 }
 main .project-cell .project-text-container .project-links a {
   font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem 1rem;
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  color: #ffffff;
-  border-radius: 0.5rem;
-  background-color: #015551;
+  font-weight: 700;
+  color: #015551;
 }
-main .project-cell .project-text-container .project-links a:hover {
-  background-color: #004440;
+@media (max-width: 600px) {
+  main .project-cell .project-text-container .project-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=progetti.css.map */

@@ -60,7 +60,7 @@ main {
     max-width: 24rem;
     padding: 0 0 1.5rem 0;
 
-    border: 3.1px solid variables.$color-primary;
+    border: 3.1px solid #6b7e7d;
     border-radius: variables.$size;
     background-color: variables.$color-bg;
 
@@ -104,7 +104,7 @@ main {
 
       .project-text-description {
         font-size: variables.$font-size-base;
-        font-weight: variables.$font-weight-semibold;
+        font-weight: variables.$font-weight-normal;
       }
 
       .project-links {
@@ -116,22 +116,14 @@ main {
 
         a {
           font-size: variables.$font-size-base;
-          font-weight: variables.$font-weight-semibold;
+          font-weight: variables.$font-weight-bold;
 
-          padding: 1rem 1rem;
+          color: variables.$color-primary;
+        }
 
-          transition:
-            border-color 0.3s ease,
-            background-color 0.3s ease,
-            color 0.3s ease;
-
-          color: variables.$color-bg;
-          border-radius: variables.$size-s;
-          background-color: variables.$color-primary;
-
-          &:hover {
-            background-color: variables.$color-primary-hover;
-          }
+        @media (max-width: 600px) {
+          flex-direction: column;
+          gap: 1rem;
         }
       }
     }

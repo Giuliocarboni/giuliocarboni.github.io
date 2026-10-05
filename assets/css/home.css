@@ -86,6 +86,8 @@ header {
   font-family: "Figtree", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
+  grid-template-columns: 1fr auto 1fr;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   display: grid;
   align-items: center;
   width: 100%;
@@ -94,8 +96,12 @@ header {
   margin: 0 auto;
   color: #353535;
   background-color: #ffffff;
-  grid-template-columns: 1fr auto 1fr;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 @media (max-width: 480px) {
   .navbar {
@@ -334,12 +340,12 @@ main {
   width: 100%;
 }
 .hero-title {
-  font-size: clamp(2rem, 1.25rem + 2.75vi, 4.5rem);
+  font-size: clamp(2rem, 1.25rem + 4.75vi, 4.5rem);
   font-weight: 600;
 }
 .hero-subtitle {
   display: block;
-  font-size: clamp(2rem, 1.25rem + 2.75vi, 4.5rem);
+  font-size: clamp(2rem, 1.25rem + 4.75vi, 4.5rem);
   font-weight: 400;
   color: color-mix(in srgb, #015551 85%, transparent);
 }
