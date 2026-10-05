@@ -156,6 +156,7 @@ header {
     display: none;
 
     @media (max-width: 480px) {
+      color: variables.$color-secondary;
       font-size: variables.$font-size-xl;
       line-height: 1;
 

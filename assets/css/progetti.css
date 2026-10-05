@@ -206,6 +206,7 @@ header {
 }
 @media (max-width: 480px) {
   .pages .fa-solid {
+    color: #d4d0ca;
     font-size: 1.3rem;
     line-height: 1;
     display: inline-block;
