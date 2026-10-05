@@ -7,8 +7,6 @@ main {
   flex: 1 0 auto;
   flex-direction: column;
 
-  padding-top: calc(variables.$padding-fluid * 2);
-
   .contact-section {
     font-family: variables.$font-body;
 
@@ -25,7 +23,6 @@ main {
     color: variables.$color-secondary;
 
     padding-inline: variables.$padding-fluid;
-    gap: 1.6rem;
 
     &-text {
       font-size: variables.$font-size-l;

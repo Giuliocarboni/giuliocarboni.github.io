@@ -80,7 +80,7 @@ main {
   &-subtitle {
     font-size: variables.$fs-fluid-hero;
     font-weight: variables.$font-weight-semibold;
-    margin-top: 1rem;
+    padding-top: calc((variables.$padding-fluid) * 0.6);
 
     display: block;
 
@@ -94,7 +94,7 @@ main {
 
     display: flex;
 
-    padding-top: variables.$padding-fluid;
+    padding-top: calc((variables.$padding-fluid) * 0.6);
   }
 }
 
@@ -129,7 +129,7 @@ main {
     justify-content: center;
 
     max-width: 100%;
-    margin-top: variables.$spacing;
+    margin-top: variables.$padding-fluid;
 
     .skill-cell {
       display: flex;

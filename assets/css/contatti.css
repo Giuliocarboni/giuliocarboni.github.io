@@ -286,7 +286,6 @@ main {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  padding-top: calc(clamp(1.1rem, 0.85rem + 1.25vw, 2rem) * 2);
 }
 main .contact-section {
   font-family: "Montserrat", sans-serif;
@@ -300,7 +299,6 @@ main .contact-section {
   margin: 0 auto;
   color: #d4d0ca;
   padding-inline: clamp(1.1rem, 0.85rem + 1.25vw, 2rem);
-  gap: 1.6rem;
 }
 main .contact-section-text {
   font-size: 1.25rem;
