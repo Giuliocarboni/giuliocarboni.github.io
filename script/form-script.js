@@ -72,6 +72,13 @@ if (form) {
       return;
     }
 
+    const messageInput = form.querySelector('textarea[name="message"]');
+    if (messageInput && messageInput.value.trim() === "") {
+      showToast("Per favore, inserisci il tuo messaggio.", "error");
+      messageInput.classList.add("input-error");
+      return;
+    }
+
     if (typeof grecaptcha === "undefined") {
       showToast(
         "Errore di sicurezza: reCAPTCHA non caricato. Disattiva eventuali blocchi pubblicitari o verifica la tua connessione.",
