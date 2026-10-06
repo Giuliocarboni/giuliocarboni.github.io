@@ -56,6 +56,13 @@ if (form) {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const nameInput = form.querySelector('input[name="name"]');
+    if (nameInput && nameInput.value.trim() === "") {
+      showToast("Per favore, inserisci il tuo nome.", "error");
+      nameInput.classList.add("input-error");
+      return;
+    }
+
     const emailInput = form.querySelector('input[type="email"]');
     const emailValue = emailInput.value.trim();
 
