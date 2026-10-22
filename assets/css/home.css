@@ -189,6 +189,7 @@ header {
 .pages a.active .fa-solid,
 .pages a.active .navbar-text {
   font-weight: 700;
+  color: #17dad0;
 }
 @media (max-width: 480px) {
   .pages a {

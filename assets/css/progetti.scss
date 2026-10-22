@@ -115,6 +115,13 @@ main {
           font-weight: variables.$font-weight-bold;
 
           color: variables.$color-secondary;
+
+          transition: color 0.2s ease;
+
+          &:hover,
+          &:focus-visible {
+            color: variables.$color-primary;
+          }
         }
 
         @media (max-width: 600px) {

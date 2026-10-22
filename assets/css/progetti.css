@@ -189,6 +189,7 @@ header {
 .pages a.active .fa-solid,
 .pages a.active .navbar-text {
   font-weight: 700;
+  color: #17dad0;
 }
 @media (max-width: 480px) {
   .pages a {
@@ -369,6 +370,10 @@ main .project-cell .project-text-container .project-links a {
   font-size: 1rem;
   font-weight: 700;
   color: #e9e6e3;
+  transition: color 0.2s ease;
+}
+main .project-cell .project-text-container .project-links a:hover, main .project-cell .project-text-container .project-links a:focus-visible {
+  color: #17dad0;
 }
 @media (max-width: 600px) {
   main .project-cell .project-text-container .project-links {
