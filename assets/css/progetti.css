@@ -347,6 +347,7 @@ main .project-cell .project-img {
 }
 main .project-cell .project-text-container {
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
@@ -363,7 +364,8 @@ main .project-cell .project-text-container .project-text-description {
 }
 main .project-cell .project-text-container .project-links {
   display: flex;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
   gap: 2rem;
 }
 main .project-cell .project-text-container .project-links a {
