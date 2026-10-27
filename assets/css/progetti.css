@@ -52,7 +52,7 @@ a:focus-visible {
 
 .fa-solid,
 .fa-brands {
-  color: #222121;
+  color: #29474a;
 }
 
 section {
@@ -189,7 +189,7 @@ header {
 .pages a.active .fa-solid,
 .pages a.active .navbar-text {
   font-weight: 700;
-  color: #17dad0;
+  color: #8bbeb2;
 }
 @media (max-width: 480px) {
   .pages a {
@@ -327,7 +327,8 @@ main .project-cell {
   max-width: 24rem;
   padding: 0 0 1.5rem 0;
   border-radius: 1rem;
-  background-color: #222121;
+  background-color: #e9e6e3;
+  color: #1a1a1b;
   gap: 0.8rem;
 }
 main .project-cell:hover .project-img {
@@ -371,11 +372,13 @@ main .project-cell .project-text-container .project-links {
 main .project-cell .project-text-container .project-links a {
   font-size: 1rem;
   font-weight: 700;
-  color: #e9e6e3;
+  color: #29474a;
   transition: color 0.2s ease;
 }
 main .project-cell .project-text-container .project-links a:hover, main .project-cell .project-text-container .project-links a:focus-visible {
-  color: #17dad0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 @media (max-width: 600px) {
   main .project-cell .project-text-container .project-links {

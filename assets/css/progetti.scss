@@ -58,7 +58,8 @@ main {
     padding: 0 0 1.5rem 0;
 
     border-radius: variables.$size;
-    background-color: variables.$color-text;
+    background-color: variables.$color-secondary;
+    color: variables.$color-bg;
 
     gap: 0.8rem;
 
@@ -115,13 +116,15 @@ main {
           font-size: variables.$font-size-base;
           font-weight: variables.$font-weight-bold;
 
-          color: variables.$color-secondary;
+          color: variables.$color-text;
 
           transition: color 0.2s ease;
 
           &:hover,
           &:focus-visible {
-            color: variables.$color-primary;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
           }
         }
 

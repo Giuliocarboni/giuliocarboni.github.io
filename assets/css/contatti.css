@@ -52,7 +52,7 @@ a:focus-visible {
 
 .fa-solid,
 .fa-brands {
-  color: #222121;
+  color: #29474a;
 }
 
 section {
@@ -189,7 +189,7 @@ header {
 .pages a.active .fa-solid,
 .pages a.active .navbar-text {
   font-weight: 700;
-  color: #17dad0;
+  color: #8bbeb2;
 }
 @media (max-width: 480px) {
   .pages a {
